@@ -1,6 +1,7 @@
 # Publishes a release as github-actions[bot], so no personal account shows on the release page.
 # tools/release.sh in the site repo uploads chop.dmg to the draft release "upload-<version>"
-# and runs this workflow, which republishes the file as release v<version> and deletes the draft.
+# and runs this workflow, which publishes the file as release v<version> (replacing the file if that
+# release exists, which resets its download count) and deletes the draft.
 name: Publish
 on:
   workflow_dispatch:
@@ -19,5 +20,10 @@ jobs:
       VERSION: ${{ inputs.version }}
     steps:
       - run: gh release download "upload-$VERSION" --pattern chop.dmg
-      - run: gh release create "v$VERSION" chop.dmg --title "Chop $VERSION" --notes "Public beta $VERSION for macOS." --latest
+      - run: |
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            gh release upload "v$VERSION" chop.dmg --clobber
+          else
+            gh release create "v$VERSION" chop.dmg --title "Chop $VERSION" --notes "Public beta $VERSION for macOS." --latest
+          fi
       - run: gh release delete "upload-$VERSION" --yes
