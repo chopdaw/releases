@@ -11,12 +11,12 @@
 
 Each track holds one sample. You chop it and rearrange the slices, lay the tracks out on a timeline, mix them with hosted VST3 effects, and drive any parameter from a MIDI controller. Chop is not a plugin and not a general-purpose DAW: it has no MIDI tracks, no piano roll, no audio recording onto the timeline and no built-in effects besides a channel EQ.
 
-**Public beta.** Free. The version of each download is on the [releases](https://github.com/chopdaw/releases/releases) page. Windows is coming soon.
+**Public beta.** Free forever. The version of each download is on the [releases](https://github.com/chopdaw/releases/releases) page. Windows is coming soon.
 
 ## Features
 
 - **Tracks and screens**: 8 tracks (name, colour), one sample each. Three screens: **Sample** (edit one track), **Multitrack** (arrange each track's parts, with automation) and **Mixer**.
-- **Toolbar**: screen selectors, Play/Stop, Rec, Loop, metronome, position, BPM, time signature, project length, grid, key (informational), undo/redo, sample browser, MIDI Mappings and Audio/MIDI settings.
+- **Toolbar**: sample browser, MIDI Mappings, Audio/MIDI settings, undo/redo, BPM, key (informational), time signature, project length, grid, position, Play/Stop, Rec, Loop, metronome and screen selectors.
 - **Samples**:
   - WAV/AIFF/FLAC/MP3, mono or stereo, loaded from a dialog, by drag & drop or from the sample browser (Folders, Favourites and Recent tabs, search, preview);
   - a file over 10 s opens an import page to pick a piece of up to 20 s, saved as a new WAV;
@@ -28,8 +28,8 @@ Each track holds one sample. You chop it and rearrange the slices, lay the track
   - Delete silences a slice or removes one block; Remove slice merges it back; copy and paste a slice's parameters.
 - **Sequence**:
   - reorder, repeat and mute slices, with grid or free placement; blocks cut or crossfade over what they cover;
-  - resized blocks are stretched (pitch kept, rendered in the background), varispeeded or cut to fit;
-  - per-block offsets on the slice's parameters, and **Roll** (retrigger, 1/8 to 1/64 and triplets, with decay and pitch ramps);
+  - resized blocks are always stretched to their length (pitch kept, rendered in the background; varispeeded in a Varispeed track);
+  - each copy of a slice with its own sound, and **Roll** (retrigger, 1/8 to 1/64 and triplets, with decay and pitch ramps);
   - up to 4 **variations** (A-D) per track, sharing the sample and slices;
   - per-track **swing** (1/8 or 1/16, 50-75 %);
   - the waveform shows the arranged result.
@@ -46,7 +46,7 @@ Each track holds one sample. You chop it and rearrange the slices, lay the track
   - a simple channel EQ on every strip (HPF, LPF, HF/LF shelf or bell, two mids), after the inserts;
   - 4 sends per track (1-2 pre-fader, 3-4 post-fader);
   - automatic delay compensation; plugins get the project's tempo and position.
-- **MIDI**: every parameter responds in real time and can be mapped with MIDI Learn (right-click any control), also to the selected track or slice; relative encoders and 14-bit CCs; a **MIDI Mappings** page. MIDI never triggers sound.
+- **MIDI**: every parameter responds in real time and can be mapped with MIDI Learn (right-click any control), also to the selected track or slice; relative encoders and 14-bit CCs; a **MIDI Mappings** page. On the Sample screen, with nothing playing, a MIDI keyboard or pads play the selected track's slices to hear and choose them (one key each from C1); nothing is recorded.
 - **Undo**: every edit can be undone; a knob or marker drag is one step.
 - **Export**: mix, stems or the slices of a track, to WAV at 16 (dithered), 24 or 32-bit float, with an optional 2 s tail.
 - **Projects**: `.chop` files (samples inside the project folder are saved with relative paths), Open Recent, Collect Samples, a prompt for unsaved changes, **autosave** every 5 minutes to a separate copy and recovery after a crash.
