@@ -9,7 +9,7 @@
   <a href="https://github.com/chopdaw/releases/releases/latest/download/chop.dmg"><b>Download for macOS</b></a> · <a href="https://chopdaw.app">chopdaw.app</a>
 </p>
 
-Each track holds one sample. You chop it and rearrange the slices, lay the tracks out on a timeline, mix them with hosted VST3 effects, and drive any parameter from a MIDI controller. Chop is not a plugin and not a general-purpose DAW: it has no MIDI tracks, no piano roll, no audio recording onto the timeline and no built-in effects besides a channel EQ.
+Each track holds one sample. You chop it and rearrange the slices, lay the tracks out on a timeline, mix them with hosted VST® 3 effects, and drive any parameter from a MIDI controller. Chop is not a plugin and not a general-purpose DAW: it has no MIDI tracks, no piano roll, no audio recording onto the timeline and no built-in effects besides a channel EQ.
 
 **Public beta.** Free forever. The version of each download is on the [releases](https://github.com/chopdaw/releases/releases) page. Windows is coming soon.
 
@@ -42,7 +42,7 @@ Each track holds one sample. You chop it and rearrange the slices, lay the track
 - **Automation**: per part, one lane under the tracks (volume, pan, sends, insert on/off, pitch, EQ band gains); drawn with points, lines and pencil, or recorded from a MIDI controller (latched until Stop); Read/Write per track.
 - **Mixer**:
   - 8 tracks, 4 returns and a master, LED peak meters;
-  - 4 VST3 inserts per strip; plugins are scanned out of process with a blacklist, managed on the **VST3 Plugins** page (File menu: scan, folders, enable/disable);
+  - 4 VST 3 inserts per strip; plugins are scanned out of process with a blacklist, managed on the **VST3 Plugins** page (File menu: scan, folders, enable/disable);
   - a simple channel EQ on every strip (HPF, LPF, HF/LF shelf or bell, two mids), after the inserts;
   - 4 sends per track (1-2 pre-fader, 3-4 post-fader);
   - automatic delay compensation; plugins get the project's tempo and position.
@@ -57,7 +57,7 @@ Each track holds one sample. You chop it and rearrange the slices, lay the track
 - **macOS**: macOS 11.5 (Big Sur) or later, on a Mac with an Apple M1 chip or better. Intel Macs are not supported.
 - **Memory**: 8 GB of RAM.
 - **Screen**: 1440 × 900 or larger, in logical pixels (after the system's display scaling). The window opens at 1320 × 840, which is also its smallest size, so the menu bar and the title bar must fit around it.
-- **Audio**: any audio device macOS supports and, to record samples, an audio input. A MIDI controller and VST3 effects are optional: Chop has no built-in effects besides the channel EQ.
+- **Audio**: any audio device macOS supports and, to record samples, an audio input. A MIDI controller and VST 3 effects are optional: Chop has no built-in effects besides the channel EQ.
 
 ## Install
 
@@ -71,4 +71,11 @@ Questions and bug reports: [feedback@chopdaw.app](mailto:feedback@chopdaw.app). 
 
 © 2026 Chop. All rights reserved. Chop is closed source and free to use. This repository holds only the downloads.
 
-Chop uses [JUCE](https://juce.com), the VST3 SDK and [Signalsmith Stretch](https://github.com/Signalsmith-Audio/signalsmith-stretch). The licences of the third-party software it includes are shown in the app (About Chop > Licences).
+Chop uses [JUCE](https://juce.com), the VST 3 SDK and [Signalsmith Stretch](https://github.com/Signalsmith-Audio/signalsmith-stretch). The licences of the third-party software it includes are shown in the app (About Chop > Licences).
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="vst-compatible.svg">
+  <img src="vst-compatible-negative.svg" width="72" height="46" alt="VST Compatible">
+</picture>
+
+VST is a registered trademark of Steinberg Media Technologies GmbH.
