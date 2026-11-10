@@ -5,13 +5,13 @@
 <h1 align="center">Chop</h1>
 
 <p align="center">
-  A minimal 8-track DAW for macOS, built around sample chopping.<br>
-  <a href="https://github.com/chopdaw/releases/releases/latest/download/chop.dmg"><b>Download for macOS</b></a> · <a href="https://chopdaw.app">chopdaw.app</a>
+  A minimal 8-track DAW for macOS and Windows, built around sample chopping.<br>
+  <a href="https://github.com/chopdaw/releases/releases/latest/download/chop.dmg"><b>Download for macOS</b></a> · <a href="https://github.com/chopdaw/releases/releases/latest/download/chop-windows.zip"><b>Download for Windows (untested)</b></a> · <a href="https://chopdaw.app">chopdaw.app</a>
 </p>
 
 Each track holds one sample. You chop it and rearrange the slices, lay the tracks out on a timeline, mix them with hosted VST® 3 effects, and drive any parameter from a MIDI controller. Chop is not a plugin and not a general-purpose DAW: it has no MIDI tracks, no piano roll, no audio recording onto the timeline and no built-in effects besides a channel EQ.
 
-**Public beta.** Free forever. The version of each download is on the [releases](https://github.com/chopdaw/releases/releases) page. Windows is coming soon.
+**Public beta.** Free forever. The version of each download is on the [releases](https://github.com/chopdaw/releases/releases) page. The Windows version is a first build that has not been tested on a PC yet.
 
 ## Features
 
@@ -55,13 +55,16 @@ Each track holds one sample. You chop it and rearrange the slices, lay the track
 ## System requirements
 
 - **macOS**: macOS 11.5 (Big Sur) or later, on a Mac with an Apple M1 chip or better. Intel Macs are not supported.
+- **Windows**: Windows 10 or 11, 64-bit (x64). Not tested on a PC yet.
 - **Memory**: 8 GB of RAM.
-- **Screen**: 1440 × 900 or larger, in logical pixels (after the system's display scaling). The window opens at 1320 × 840, which is also its smallest size, so the menu bar and the title bar must fit around it.
-- **Audio**: any audio device macOS supports and, to record samples, an audio input. A MIDI controller and VST 3 effects are optional: Chop has no built-in effects besides the channel EQ.
+- **Screen**: 1440 × 900 or larger, in logical pixels (after the system's display scaling). The window opens at 1320 × 840, which is also its smallest size, so the menu bar or taskbar and the title bar must fit around it.
+- **Audio**: any audio device the system supports (Core Audio on macOS; WASAPI, DirectSound or ASIO on Windows) and, to record samples, an audio input. A MIDI controller and VST 3 effects are optional: Chop has no built-in effects besides the channel EQ.
 
 ## Install
 
 Download [chop.dmg](https://github.com/chopdaw/releases/releases/latest/download/chop.dmg), open it and drag Chop into Applications.
+
+Windows (not tested on a PC yet): download [chop-windows.zip](https://github.com/chopdaw/releases/releases/latest/download/chop-windows.zip), extract it and run `Chop.exe`; there is no installer. The beta is not signed yet: if Windows shows "Windows protected your PC", click More info, then Run anyway.
 
 ## Feedback
 
@@ -78,4 +81,4 @@ Chop uses [JUCE](https://juce.com), the VST 3 SDK and [Signalsmith Stretch](http
   <img src="vst-compatible-negative.svg" width="72" height="46" alt="VST Compatible">
 </picture>
 
-VST is a registered trademark of Steinberg Media Technologies GmbH.
+VST is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.
