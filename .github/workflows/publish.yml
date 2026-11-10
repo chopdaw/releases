@@ -1,7 +1,7 @@
 # Publishes a release as github-actions[bot], so no personal account shows on the release page.
-# tools/release.sh in the site repo uploads chop.dmg to the draft release "upload-<version>"
-# and runs this workflow, which publishes the file as release v<version> (replacing the file if that
-# release exists, which resets its download count) and deletes the draft.
+# tools/release.sh in the site repo uploads chop.dmg and chop-windows.zip to the draft release
+# "upload-<version>" and runs this workflow, which publishes them as release v<version> (replacing the
+# files and the notes if that release exists, which resets their download counts) and deletes the draft.
 name: Publish
 on:
   workflow_dispatch:
@@ -19,11 +19,13 @@ jobs:
       GH_REPO: ${{ github.repository }}
       VERSION: ${{ inputs.version }}
     steps:
-      - run: gh release download "upload-$VERSION" --pattern chop.dmg
+      - run: gh release download "upload-$VERSION" --pattern chop.dmg --pattern chop-windows.zip
       - run: |
+          NOTES="Public beta $VERSION for macOS (chop.dmg) and Windows (chop-windows.zip). The Windows version has not been tested on a PC yet."
           if gh release view "v$VERSION" >/dev/null 2>&1; then
-            gh release upload "v$VERSION" chop.dmg --clobber
+            gh release upload "v$VERSION" chop.dmg chop-windows.zip --clobber
+            gh release edit "v$VERSION" --notes "$NOTES"
           else
-            gh release create "v$VERSION" chop.dmg --title "Chop $VERSION" --notes "Public beta $VERSION for macOS." --latest
+            gh release create "v$VERSION" chop.dmg chop-windows.zip --title "Chop $VERSION" --latest --notes "$NOTES"
           fi
       - run: gh release delete "upload-$VERSION" --yes
