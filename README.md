@@ -58,7 +58,7 @@ Each track holds one sample. You chop it and rearrange the slices, lay the track
 - **Windows**: Windows 10 or 11, 64-bit (x64). Not tested on a PC yet.
 - **Memory**: 8 GB of RAM.
 - **Screen**: 1440 × 900 or larger, in logical pixels (after the system's display scaling). The window opens at 1320 × 840, which is also its smallest size, so the menu bar or taskbar and the title bar must fit around it.
-- **Audio**: any audio device the system supports (Core Audio on macOS; WASAPI, DirectSound or ASIO on Windows) and, to record samples, an audio input. A MIDI controller and VST 3 effects are optional: Chop has no built-in effects besides the channel EQ.
+- **Audio**: any audio device the system supports (Core Audio on macOS; WASAPI, DirectSound or ASIO® on Windows) and, to record samples, an audio input. A MIDI controller and VST 3 effects are optional: Chop has no built-in effects besides the channel EQ.
 
 ## Install
 
@@ -80,5 +80,9 @@ Chop uses [JUCE](https://juce.com), the VST 3 SDK and [Signalsmith Stretch](http
   <source media="(prefers-color-scheme: dark)" srcset="vst-compatible.svg">
   <img src="vst-compatible-negative.svg" width="72" height="46" alt="VST Compatible">
 </picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="asio-compatible-white.svg">
+  <img src="asio-compatible.svg" width="72" height="67" alt="ASIO Compatible. ASIO is a registered trademark of Steinberg Media Technologies GmbH">
+</picture>
 
-VST is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.
+VST is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a registered trademark of Steinberg Media Technologies GmbH.
